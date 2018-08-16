@@ -23,12 +23,25 @@ public class TicketMachine
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int price)
     {
-        price = cost;
-        balance = 0;
-        total = 0;
+        if (price < 0) {
+            this.price = 50;
+        } else {
+            this.price = price;
+        }
+        this.balance = 0;
+        this.total = 0;
+        
     }
+    
+    public TicketMachine() {
+        //this(50)  //alternativa
+        this.price = 50;
+        this.balance = 0;
+        this.total = 0;
+    }
+    
 
     /**
      * Return the price of a ticket.
@@ -36,6 +49,10 @@ public class TicketMachine
     public int getPrice()
     {
         return price;
+    }
+    
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     /**
@@ -52,9 +69,20 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        balance = balance + amount;
+        if (amount >= 0) {
+            balance = balance + amount;
+        } else {
+            System.out.println("Valor inserido e invalido (deve ser maior que 0).");
+        }
     }
 
+    private int refund() {
+        int troco = this.balance - this.price;
+        this.balance = this.price;
+        return troco;
+        
+    }
+    
     /**
      * Print a ticket.
      * Update the total collected and
@@ -62,17 +90,50 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        // Simulate the printing of a ticket.
-        System.out.println("##################");
-        System.out.println("# The BlueJ Line");
-        System.out.println("# Ticket");
-        System.out.println("# " + price + " cents.");
-        System.out.println("##################");
-        System.out.println();
-
-        // Update the total collected with the balance.
-        total = total + balance;
-        // Clear the balance.
-        balance = 0;
+        if (this.balance >= this.price){
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + price + " cents.");
+            System.out.println("##################");
+            System.out.println();
+    
+            
+            if (this.balance > this.price) {
+                int troco = this.refund();
+                System.out.println("Toma seu troco: "+troco);
+            }
+            
+            // Update the total collected with the balance.
+            this.total = this.total + this.balance;
+            
+            // Clear the balance.
+            balance = 0;
+        } else {
+            System.out.println("Valor inserido ate o momento insuficiente.");
+            this.prompt();
+            this.showPrice();
+        }
     }
+    
+    public void prompt(){
+        System.out.println("Insira a quantidade correta de dinheiro");
+     
+    }
+    
+    public void showPrice(){
+        System.out.println("O preço de um ticket eh "+this.price);
+     
+    }
+    
+    public int empty() {
+        int aux = this.total;
+        this.total = 0;
+        return aux;
+    }
+    
+    
+    
+    
 }

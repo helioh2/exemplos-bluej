@@ -127,11 +127,6 @@ public class Rectangle implements Shape
         Canvas.getInstance().show(this);
     }
 
-    public String toString()
-    {
-        return "Rectangle[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + "]";
-    }
-
     public void paintShape(Graphics2D g2)
     {
         Rectangle2D.Double rect = new Rectangle2D.Double(getX(), getY(),
