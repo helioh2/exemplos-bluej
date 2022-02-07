@@ -11,6 +11,8 @@
  */
 public class TicketMachine
 {
+    // ATRIBUTOS (CAMPOS)
+    
     // The price of a ticket from this machine.
     private int price;
     // The amount of money entered by a customer so far.
@@ -18,41 +20,28 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
 
+        
+    //CONSTRUTOR
     /**
      * Create a machine that issues tickets of the given price.
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(int price)
+    public TicketMachine(int cost)
     {
-        if (price < 0) {
-            this.price = 50;
-        } else {
-            this.price = price;
-        }
-        this.balance = 0;
-        this.total = 0;
-        
-    }
-    
-    public TicketMachine() {
-        //this(50)  //alternativa
-        this.price = 50;
+        this.price = cost;  // this.price --> variavel price deste objeto 
         this.balance = 0;
         this.total = 0;
     }
-    
 
+    // METODOS
+    
     /**
      * Return the price of a ticket.
      */
     public int getPrice()
     {
-        return price;
-    }
-    
-    public void setPrice(int price) {
-        this.price = price;
+        return this.price;  // RETORNA PARA QUEM CHAMOU O PREÇO DESTE OBJETO (OU: DO NOSSO OBJETO)
     }
 
     /**
@@ -61,7 +50,7 @@ public class TicketMachine
      */
     public int getBalance()
     {
-        return balance;
+        return this.balance;
     }
 
     /**
@@ -69,20 +58,10 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        if (amount >= 0) {
-            balance = balance + amount;
-        } else {
-            System.out.println("Valor inserido e invalido (deve ser maior que 0).");
-        }
+        //this.balance = this.balance + amount;
+        this.balance += amount;
     }
 
-    private int refund() {
-        int troco = this.balance - this.price;
-        this.balance = this.price;
-        return troco;
-        
-    }
-    
     /**
      * Print a ticket.
      * Update the total collected and
@@ -90,6 +69,7 @@ public class TicketMachine
      */
     public void printTicket()
     {
+        
         if (this.balance >= this.price){
             // Simulate the printing of a ticket.
             System.out.println("##################");
@@ -98,42 +78,28 @@ public class TicketMachine
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
-    
-            
-            if (this.balance > this.price) {
-                int troco = this.refund();
-                System.out.println("Toma seu troco: "+troco);
-            }
             
             // Update the total collected with the balance.
-            this.total = this.total + this.balance;
-            
+            this.total = this.total + this.price;
             // Clear the balance.
-            balance = 0;
+            this.balance = this.balance - this.price;  //sobrar o troco
         } else {
-            System.out.println("Valor inserido ate o momento insuficiente.");
-            this.prompt();
-            this.showPrice();
+            System.out.println("Voce nao colocou a quantidade de dinheiro suficiente para o ticket. Faltam "+ (this.price - this.balance));
         }
-    }
-    
-    public void prompt(){
-        System.out.println("Insira a quantidade correta de dinheiro");
-     
-    }
-    
-    public void showPrice(){
-        System.out.println("O preço de um ticket eh "+this.price);
-     
-    }
-    
-    public int empty() {
-        int aux = this.total;
-        this.total = 0;
-        return aux;
+        
+        
+
+        
     }
     
     
     
-    
+    /**
+     * Retorna o troco baseado no que ha no balanço
+     */
+    public int getRefund(){  // ASSINATURA DO METODO
+        int troco = this.balance;   // this.balance == 50 --> troco == ?? --> troco == 50 / this.balance == 50
+        this.balance = 0;  // this.balance == 50 -> this.balance == 0
+        return troco; // return 50
+    }
 }
