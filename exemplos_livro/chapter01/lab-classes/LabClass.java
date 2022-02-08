@@ -24,7 +24,7 @@ public class LabClass
         instructor = "unknown";
         room = "unknown";
         timeAndDay = "unknown";
-        students = new ArrayList<Student>();
+        students = new ArrayList<Student>(); // CRIADA LISTA VAZIA DE ALUNOS
         capacity = maxNumberOfStudents;
     }
 
@@ -37,7 +37,7 @@ public class LabClass
             System.out.println("The class is full, you cannot enrol.");
         }
         else {
-            students.add(newStudent);
+            this.students.add(newStudent);
         }
     }
     

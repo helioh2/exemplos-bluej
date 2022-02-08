@@ -33,6 +33,13 @@ public class TicketMachine
         this.balance = 0;
         this.total = 0;
     }
+    
+    
+    public TicketMachine() {
+        this.price = 50;   // VALOR PADRAO (DEFAULT) PARA O PREÇO
+        this.balance = 0;
+        this.total = 0;
+    }
 
     // METODOS
     
@@ -53,13 +60,23 @@ public class TicketMachine
         return this.balance;
     }
 
+    
+    public int getTotal() {
+        return this.total;
+    }
+    
     /**
-     * Receive an amount of money from a customer.
+     * Recebe uma quantidade de dinheiro e adiciona ao balanço. A quantidade tem que ser positivo.
      */
     public void insertMoney(int amount)
     {
         //this.balance = this.balance + amount;
-        this.balance += amount;
+        if (amount > 0){
+            this.balance += amount;
+        } else {
+            System.out.println("O valor inserido deve ser maior do que zero");
+        }
+        
     }
 
     /**

@@ -8,6 +8,7 @@
  */
 public class Student
 {
+    // ATRIBUTOS (CAMPOS)
     // the student's full name
     private String name;
     // the student ID
@@ -20,9 +21,9 @@ public class Student
      */
     public Student(String fullName, String studentID)
     {
-        name = fullName;
-        id = studentID;
-        credits = 0;
+        this.name = fullName;
+        this.id = studentID;
+        this.credits = 0;
     }
 
     /**
@@ -30,21 +31,21 @@ public class Student
      */
     public String getName()
     {
-        return name;
+        return this.name;
     }
 
     /**
      * Set a new name for this student.
      */
-    public void changeName(String replacementName)
+    public void setName(String replacementName)
     {
-        name = replacementName;
+        this.name = replacementName;
     }
 
     /**
      * Return the student ID of this student.
      */
-    public String getStudentID()
+    public String getId()
     {
         return id;
     }
@@ -72,7 +73,7 @@ public class Student
      */
     public String getLoginName()
     {
-        return name.substring(0,4) + id.substring(0,3);
+        return this.name.substring(0,4) + this.id.substring(0,3);
     }
     
     /**
