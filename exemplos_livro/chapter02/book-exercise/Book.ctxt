@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Book
+comment0.text=\n\ A\ class\ that\ maintains\ information\ on\ a\ book.\n\ This\ might\ form\ part\ of\ a\ larger\ application\ such\n\ as\ a\ library\ system,\ for\ instance.\n\n\ @author\ (Insert\ your\ name\ here.)\n\ @version\ (Insert\ today's\ date\ here.)\n
+comment1.params=bookAuthor\ bookTitle
+comment1.target=Book(java.lang.String,\ java.lang.String)
+comment1.text=\n\ Construtor\n
+comment2.params=
+comment2.target=java.lang.String\ getAuthor()
+comment2.text=\n\ Recuperar\ (pegar)\ o\ valor\ do\ atributo\ 'author'\n
+numComments=3

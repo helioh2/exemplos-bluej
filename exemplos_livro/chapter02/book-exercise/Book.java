@@ -11,16 +11,58 @@ class Book
     // The fields.
     private String author;
     private String title;
+    private int contEmprestimos;
 
     /**
-     * Set the author and title fields when this object
-     * is constructed.
+     * Construtor
      */
     public Book(String bookAuthor, String bookTitle)
     {
-        author = bookAuthor;
-        title = bookTitle;
+        this.author = bookAuthor;
+        this.title = bookTitle;
+        
     }
 
-    // Add the methods here ...
+    /**
+     * Recuperar (pegar) o valor do atributo 'author'
+     */
+    public String getAuthor(){
+        return this.author;
+    }
+    
+    
+    public void printAuthor(){
+        System.out.println(this.author);
+    }
+    
+    public void printDetails(){
+        String detalhes = "Title: "+this.title + "BLABLABLA";
+        detalhes = detalhes + "BLUBLU";
+        
+        if (this.refNumber.length() == 0){
+            detalhes += "ZZZ";
+        } else {
+            detalhes += ...
+        }
+        
+        System.out.print(detalhes);
+        
+        
+    }
+    
+    public void setRefNumber(String ref){  //ref = "537" ... ref.length() --> 3
+        if (ref.length() >= 3) {
+            
+        } else {
+            System.out.print(...
+        }
+    }
+    
+    
+    public void emprestar(){
+        this.contEmprestimo++;  // Exemplo: this.contEmprestimo == 2  --> this.contEmprestimo == 3
+    }
+    
+    getContEmprestimos()
+    
 }

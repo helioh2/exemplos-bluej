@@ -14,7 +14,9 @@ public class MailServer
     // Storage for the arbitrary number of mail items to be stored
     // on the server.
     private List<MailItem> items;
-
+    // ["arroz", feijao", "macarrao"]
+    //    0          1           2
+ 
     /**
      * Construct a mail server.
      */

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Movel
+comment0.text=\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Movel\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\n
+comment1.params=nome
+comment1.target=Movel(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNome()
+numComments=3

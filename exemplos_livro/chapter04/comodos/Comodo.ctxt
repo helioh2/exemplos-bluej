@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Comodo
+comment0.text=\n\ Representa\ um\ comodo.\n
+comment1.params=nome
+comment1.target=Comodo(java.lang.String)
+comment2.params=lampada
+comment2.target=void\ setLampada(Lampada)
+comment3.params=movel
+comment3.target=void\ addMovel(Movel)
+comment4.params=
+comment4.target=void\ iluminar()
+numComments=5
