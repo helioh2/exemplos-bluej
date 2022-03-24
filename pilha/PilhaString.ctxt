@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=PilhaString
+comment0.text=\n\ Uma\ pilha\ de\ string\n
+comment1.params=
+comment1.target=PilhaString()
+comment2.params=novoItem
+comment2.target=void\ empilhar(java.lang.String)
+comment2.text=\n\ Recebe\ uma\ string\ e\ coloca\ no\ topo\ da\ pilha.\n\n
+comment3.params=
+comment3.target=java.lang.String\ desempilhar()
+comment3.text=\n\ Retirar\ o\ elemento\ do\ topo\ da\ pilha\ e\n\ retornar\ esse\ elemento\n
+comment4.params=
+comment4.target=java.lang.String\ getTopo()
+comment5.params=
+comment5.target=boolean\ isVazia()
+numComments=6

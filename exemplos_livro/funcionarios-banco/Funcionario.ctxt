@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Funcionario
+comment0.text=\n\ Representa\ um\ funcionario\ do\ banco\n
+comment1.params=nome\ cpf
+comment1.target=Funcionario(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNome()
+comment3.params=
+comment3.target=java.lang.String\ getCpf()
+comment4.params=
+comment4.target=double\ getSalario()
+comment5.params=salario
+comment5.target=void\ setSalario(double)
+comment6.params=valor
+comment6.target=void\ pagar(double)
+comment7.params=
+comment7.target=double\ getBonificacao()
+numComments=8

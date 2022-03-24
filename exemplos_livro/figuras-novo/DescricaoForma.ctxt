@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=DescricaoForma
+comment1.params=shape\ color
+comment1.target=DescricaoForma(java.awt.Shape,\ java.lang.String)
+comment2.params=colorString\ graphic
+comment2.target=void\ setForegroundColor(java.lang.String,\ java.awt.Graphics2D)
+comment2.text=\n\ Set\ the\ foreground\ color\ of\ the\ Canvas.\n\ @param\ \ newColor\ \ \ the\ new\ color\ for\ the\ foreground\ of\ the\ Canvas\ \n
+comment3.params=graphic
+comment3.target=void\ draw(java.awt.Graphics2D)
+numComments=4

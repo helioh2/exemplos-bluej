@@ -11,7 +11,7 @@ public class Comodo
     private String nome;
     
     public Comodo(String nome){
-        this.moveis = new ArrayList(); 
+        this.moveis = new ArrayList(); // CRIA LISTA VAZIA
         // ArrayList = lista implementada como um vetor de tamanho dinamico
         this.nome = nome;
     }

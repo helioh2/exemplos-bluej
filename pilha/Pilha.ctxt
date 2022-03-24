@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Pilha
+comment0.text=\n\ Pilha\ para\ objetos\ genericos\ (para\ objetos\ de\ qualquer\ tipo)\n\ Tipo\ de\ dado\ parametrizado\n
+comment1.params=
+comment1.target=Pilha()
+comment2.params=novoItem
+comment2.target=void\ empilhar(java.lang.Object)
+comment2.text=\n\ Recebe\ um\ objeto\ e\ coloca\ no\ topo\ da\ pilha.\n\n
+comment3.params=
+comment3.target=java.lang.Object\ desempilhar()
+comment3.text=\n\ Retirar\ o\ elemento\ do\ topo\ da\ pilha\ e\n\ retornar\ esse\ elemento\n
+comment4.params=
+comment4.target=java.lang.Object\ getTopo()
+comment5.params=
+comment5.target=boolean\ isVazia()
+numComments=6
