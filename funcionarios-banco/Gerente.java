@@ -5,7 +5,7 @@
  * @author (seu nome) 
  * @version (um número da versão ou uma data)
  */
-public class Gerente extends Funcionario
+public class Gerente extends Funcionario implements Autenticavel
 {
    private String senha;
    
@@ -23,8 +23,13 @@ public class Gerente extends Funcionario
    
    // Sobrescrita de metodo
    public double getBonificacao() {
-       double normal = super.getBonificacao();
+       double normal = this.salario * 0.1;
        return normal + 1000;    
+    }
+
+    public boolean autentica() {
+        // TODO
+        return true;
     }
    
    

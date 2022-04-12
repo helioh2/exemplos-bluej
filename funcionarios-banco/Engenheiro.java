@@ -12,6 +12,6 @@ public class Engenheiro extends Funcionario
     }
     
     public double getBonificacao(){
-        return this.salario * 0.15;
+        return this.salario * 0.18;
     }
 }
