@@ -2,32 +2,21 @@
 /**
  * Escreva uma descrição da classe Quadrado aqui.
  */
-public class Quadrado extends Figura implements AreaCalculavel
+public class Quadrado extends Retangulo implements AreaCalculavel
 {
-    private int tamanho; // tamanho do lado
+    //private int tamanho; // tamanho do lado
    
     public Quadrado(int x, int y, int tamanho) {
-        this.x = x;
-        this.y = y;
-        this.tamanho = tamanho;
+        super(x, y, tamanho, tamanho);
     }
 
     //metodos acessadores
 
 
     public int getTamanho() {
-        return tamanho;
+        return largura;
     }
 
-    public void mover(int dx, int dy) {
-        this.x += dx;
-        this.y += dy;
-    }
-
-    @Override
-    public void redimensionar(int proporcao){
-        this.tamanho *= proporcao;
-    }
 
     @Override
     public void desenhar() {
@@ -36,9 +25,18 @@ public class Quadrado extends Figura implements AreaCalculavel
     }
 
     @Override
-    public int area() {
-        return tamanho*tamanho;
+    public void setLargura(int largura) {
+        this.largura = largura;
+        this.altura = largura;
     }
+
+    @Override
+    public void setAltura(int altura) {
+        this.altura = altura;
+        this.largura = altura;
+    }
+
+
    
    
    

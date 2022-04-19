@@ -2,8 +2,8 @@ import java.awt.*;
 
 public class Retangulo extends Figura implements AreaCalculavel{
 
-    private int largura;
-    private int altura;
+    protected int largura;
+    protected int altura;
 
     public Retangulo(int x, int y, int largura, int altura) {
         this.x = x;
@@ -16,6 +16,14 @@ public class Retangulo extends Figura implements AreaCalculavel{
     public void redimensionar(int proporcao){
         this.largura *= proporcao;
         this.altura *= proporcao;
+    }
+
+    public void setLargura(int largura){
+        this.largura = largura;
+    }
+
+    public void setAltura(int altura){
+        this.altura = altura;
     }
 
     @Override
