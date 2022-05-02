@@ -7,4 +7,6 @@ public interface IPessoa {
     public void setEndereco(String endereco);
     
     public void setNome(String nome);
+
+    public String getUsername();
 }

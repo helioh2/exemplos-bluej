@@ -12,7 +12,7 @@ public class Retangulo extends Figura implements AreaCalculavel{
         this.altura = altura;
     }
 
-    @Override
+    @Override  // Sobrescrita ou reescrita
     public void redimensionar(int proporcao){
         this.largura *= proporcao;
         this.altura *= proporcao;

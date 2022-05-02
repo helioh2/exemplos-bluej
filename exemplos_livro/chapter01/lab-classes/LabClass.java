@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class LabClass
 {
-    private String instructor;
+    private Instrutor instructor;
     private String room;
     private String timeAndDay;
     private ArrayList<Student> students;

@@ -10,6 +10,11 @@ public class CalculadorDeAreas {
         return soma;
     }
     
+
+
+
+
+    
     // ESBOÇO DA VERSÃO SEM O USO DE POLIMORFISMO:
     public static int somaAreasSemPolimorfismo(List<Object> figuras){
         int soma = 0;
@@ -19,7 +24,9 @@ public class CalculadorDeAreas {
             } else if (fig instanceof Retangulo) {
                 //...
             } else if (fig instanceof Triangulo) {
-                //... 
+                //... dkfkldjlkfj
+            } else if (fig instanceof Elipse) {
+                //...
             }
             //....
             

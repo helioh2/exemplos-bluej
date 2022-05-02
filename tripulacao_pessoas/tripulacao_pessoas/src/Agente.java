@@ -1,25 +1,11 @@
-public class Agente implements IPessoa {
+public class Agente extends PessoaDecorator {
     
-    private Pessoa pessoa;
-
-    public Agente(Pessoa pessoa) {
-        this.pessoa = pessoa;
+    public Agente(IPessoa pessoa) {
+        super(pessoa);
     }
 
-    public String getEndereco() {
-        return this.pessoa.getEndereco();
+    @Override
+    public String getUsername() {
+        return this.pessoa.getUsername() + "Ag";
     }
-
-    public String getNome() {
-        return this.pessoa.getNome();
-    }
-
-    public void setEndereco(String endereco) {
-        this.pessoa.setEndereco(endereco);
-    }
-    
-    public void setNome(String nome) {
-        this.pessoa.setNome(nome);
-    }
-
 }

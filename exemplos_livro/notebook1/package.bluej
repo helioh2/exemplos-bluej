@@ -2,10 +2,10 @@
 dependency1.from=Main
 dependency1.to=Agenda
 dependency1.type=UsesDependency
-editor.fx.0.height=725
-editor.fx.0.width=871
-editor.fx.0.x=291
-editor.fx.0.y=52
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=121
 objectbench.width=1342
 package.divider.horizontal=0.6

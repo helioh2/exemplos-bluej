@@ -25,7 +25,7 @@ public class Main {
         int resultado = CalculadorDeAreas.somaAreas(figuras);
         System.out.println(resultado);
 
-
+        //Figura figura1 = new Figura(); NÃO FUNCIONA
         
     }
     

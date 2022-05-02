@@ -6,13 +6,9 @@
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
  */
-public class Student
+public class Student extends Pessoa
 {
-    // ATRIBUTOS (CAMPOS)
-    // the student's full name
-    private String name;
-    // the student ID
-    private String id;
+
     // the amount of credits for study taken so far
     private int credits;
 
@@ -24,30 +20,6 @@ public class Student
         this.name = fullName;
         this.id = studentID;
         this.credits = 0;
-    }
-
-    /**
-     * Return the full name of this student.
-     */
-    public String getName()
-    {
-        return this.name;
-    }
-
-    /**
-     * Set a new name for this student.
-     */
-    public void setName(String replacementName)
-    {
-        this.name = replacementName;
-    }
-
-    /**
-     * Return the student ID of this student.
-     */
-    public String getId()
-    {
-        return id;
     }
 
     /**

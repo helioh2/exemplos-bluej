@@ -11,7 +11,9 @@ public class Engenheiro extends Funcionario
          super(nome, cpf);   
     }
     
-    public double getBonificacao(){
-        return this.salario * 0.18;
+    @Override
+    public double getBonificacao(){  // SOBRESCRITA OU REESCRITA
+        double bonificacao1 = super.getBonificacao();
+        return bonificacao1 + this.salario*0.5;
     }
 }

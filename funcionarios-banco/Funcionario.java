@@ -35,7 +35,10 @@ public abstract class Funcionario
         System.out.println("Funcionario "+this.nome+" pago com sucesso! VALOR: "+valor);
     }
     
-    public abstract double getBonificacao(); // PRECISO IMPLEMENTA-LO NAS CLASSES FILHAS
+    public double getBonificacao(){
+        return this.salario*0.1;
+
+    } // PRECISO IMPLEMENTA-LO NAS CLASSES FILHAS
     
     
     

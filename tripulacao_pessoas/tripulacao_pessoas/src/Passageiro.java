@@ -1,24 +1,11 @@
-public class Passageiro implements IPessoa {
+public class Passageiro extends PessoaDecorator {
     
-    private Pessoa pessoa;
-
-    public Passageiro(Pessoa pessoa) {
-        this.pessoa = pessoa;
+    public Passageiro(IPessoa pessoa) {
+        super(pessoa);
     }
 
-    public String getEndereco() {
-        return this.pessoa.getEndereco();
-    }
-
-    public String getNome() {
-        return this.pessoa.getNome();
-    }
-
-    public void setEndereco(String endereco) {
-        this.pessoa.setEndereco(endereco);
-    }
-    
-    public void setNome(String nome) {
-        this.pessoa.setNome(nome);
+    @Override
+    public String getUsername() {
+        return this.pessoa.getUsername() + "Pass";
     }
 }
