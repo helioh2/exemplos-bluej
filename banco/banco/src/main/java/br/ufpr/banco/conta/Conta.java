@@ -67,7 +67,7 @@ public class Conta {
     public void depositar(double valor) throws LimiteUltrapassadoException, IllegalArgumentException {
 
         if (valor < 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Valor do deposito não pode ser menor que zero");
         }
 
         if (this.saldo + valor > this.limite){
@@ -80,7 +80,7 @@ public class Conta {
     public void sacar(double valor) throws SaldoInsuficienteException, IllegalArgumentException {
 
         if (valor < 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Valor do saque não pode ser menor que zero");
         }
 
         if (this.saldo < valor) {

@@ -1,15 +1,15 @@
 #BlueJ package file
-dependency1.from=Pilha
-dependency1.to=PilhaVaziaException
+dependency1.from=PilhaTest
+dependency1.to=Pilha
 dependency1.type=UsesDependency
 dependency2.from=PilhaTest
-dependency2.to=Pilha
+dependency2.to=PilhaVaziaException
 dependency2.type=UsesDependency
-dependency3.from=PilhaTest
-dependency3.to=PilhaVaziaException
+dependency3.from=PilhaStringTest
+dependency3.to=PilhaString
 dependency3.type=UsesDependency
-dependency4.from=PilhaStringTest
-dependency4.to=PilhaString
+dependency4.from=Pilha
+dependency4.to=PilhaVaziaException
 dependency4.type=UsesDependency
 dependency5.from=Main
 dependency5.to=Pilha

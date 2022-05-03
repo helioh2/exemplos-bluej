@@ -17,6 +17,12 @@ public abstract class Animal implements Comparable<Animal> {
         this.id = novoId();
     }
 
+    // SOBRECARGA DE CONSTRUTOR
+    public Animal(String nome, int id) {
+        this.nome = nome;
+        this.id = id;
+    }
+
     public abstract void barulho();
     public abstract void mover();
 

@@ -40,9 +40,9 @@ public class Main
         
         Pilha<String> pilha1 = new Pilha();
         
-        try {
+        try { // TENTE FAZER:
             pilha1.desempilhar();
-        } catch (PilhaVaziaException e) {
+        } catch (PilhaVaziaException e) { // SE EXCEÇAO LANÇADA, CAPTURA A EXCEÇAO
             // TRATAR A EXCEÇAO
             System.out.println("ERRO: " + e.getMessage());
         }

@@ -30,7 +30,10 @@ public class Pilha<T>
         
         if (this.isVazia()){
             throw new PilhaVaziaException("Impossivel desempilhar de pilha vazia.");
+            // LANÇA NOVA EXCEÇAO
         }
+        
+        // CASO NORMAL:
         T ultimo = this.lista.removeLast();
         return ultimo;
 
